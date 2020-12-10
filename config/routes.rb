@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     put 'bookers/:id' => 'bookers#update'
     delete 'bookers/:id' => 'bookers#destroy'
 
+get 'bookers/success' => 'bookers#success', as:'success_book'
+get 'bookers/error' => 'bookers#error', as:'error_book'
+
   # get 'top' => 'bookers#top'
   root 'bookers#top'
 end
